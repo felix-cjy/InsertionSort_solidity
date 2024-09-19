@@ -21,18 +21,3 @@ contract InsertionSort {
     }
 }
 
-/*
-错误例子         
-for (uint256 i = 1; i < arr.length; i++) {
-    uint256 key = arr[i];
-    uint256 j = i-1;
-
-    while (j >= 0 && arr[j] > key) {
-        arr[j+1] = arr[j];
-        j--;
-    }
-    arr[j+1] = key;
-} 
-这样当j为0时, 还会j--下溢,但这在uint类型是不行的
-
-*/
