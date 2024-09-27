@@ -1,19 +1,28 @@
 ## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+```bash
+$ forge test --gas-report
+[⠢] Compiling...
+No files changed, compilation skipped
 
-Foundry consists of:
+Ran 6 tests for test/InsertionSortTest.t.sol:InsertionSortTest
+[PASS] testArrayWithDuplicates() (gas: 23674)
+[PASS] testEmptyArray() (gas: 9360)
+[PASS] testRandomArray() (gas: 23342)
+[PASS] testReverseArray() (gas: 19216)
+[PASS] testSingleElementArray() (gas: 10273)
+[PASS] testSortedArray() (gas: 15263)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 4.16ms (9.33ms CPU time)
+| src/InsertionSort.sol:InsertionSort contract |                 |      |        |      |         |
+|----------------------------------------------|-----------------|------|--------|------|---------|
+| Deployment Cost                              | Deployment Size |      |        |      |         |
+| 215140                                       | 781             |      |        |      |         |
+| Function Name                                | min             | avg  | median | max  | # calls |
+| sort                                         | 747             | 4907 | 4981   | 9799 | 6       |
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
+Ran 1 test suite in 18.82ms (4.16ms CPU time): 6 tests passed, 0 failed, 0 skipped (6 total tests)
+```
 
 ### Build
 
@@ -27,12 +36,6 @@ $ forge build
 $ forge test
 ```
 
-### Format
-
-```shell
-$ forge fmt
-```
-
 ### Gas Snapshots
 
 ```shell
@@ -44,34 +47,6 @@ $ forge snapshot
 ```shell
 $ anvil
 ```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
-
-## TinTin 训练营
-
-学号 135
-
-【学员手册】https://attractive-spade-1e3.notion.site/3c55c15d535c43f7a236183af40cf76b?pvs=4
-
-课前学习资料：https://attractive-spade-1e3.notion.site/dff0bb9eaf7645e2b684c99f4e97c3a2?pvs=4
 
 ## 钱包
 
